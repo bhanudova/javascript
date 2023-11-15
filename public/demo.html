@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../src/scripts/emi.js"></script>
+</head>
+
+<body class="container-fluid">
+    <h2>Personal Loan Calculator</h2>
+    <div class="p-5 rounded-3 shadow-lg ">
+        <div class="row gap-5">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="d-flex ">
+                    <h4>Amount You Needed&#8377;</h4>
+                    <input type="text" size="10" class="ms-1" id="txtAmount"  value="50000" onkeyup="txtamountChange()">
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="d-flex">
+                    <h4>For</h4>
+                    <input type="text" size="10" class="mx-2" id="txtYear" value="1" onkeyup="txtyearChange()">
+                    <h4>Years</h4>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="d-flex">
+                    <h4>Interest Rate</h4>
+                    <input type="text" size="10" class="mx-1" id="txtInterest" value="10.24" onkeyup="txtinterestChange()">
+                    <h4>%</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 gap-2">
+            <div class="col d-flex bg-body-secondary rounded p-2">
+                &#8377;50,000<input type="range" class="form-range p-1 rounded-3 w-75"  value="50000" id="rangeAmount" min="50000" max="1000000" onchange="amountChange()">&#8377;10,00,000
+            </div>
+            <div class="col d-flex bg-body-secondary rounded p-2">
+              1<input type="range" class="form-range p-1 rounded-3 w-100" id="yearRange" value="1" min="1" max="7" step="0.5" onchange="yearChange()">7
+            </div>
+            <div class="col d-flex bg-body-secondary rounded p-2">
+               10.24%<input type="range" class="form-range p-1 rounded-3 w-75" value="10.24" id="interestRange" onchange="interestChange()" min="10.24" max="18.45" step="0.1">18.45%
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <button onclick="CalculateClick()" class="btn btn-primary fw-medium">Calculate</button>
+    </div>
+    <div class="text-center mt-5">
+        <b id="result"></b>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        // function bodyLoad() {
+        //     var yourWeight = parseFloat(prompt("Enter Weight"));
+        //     var yourStatus = document.getElementById('yourStatus');
+        //     if (yourWeight < 53) {
+        //         yourStatus.style.marginLeft = "200px";
+        //     } else if (yourWeight > 54 && yourWeight < 70) {
+        //         yourStatus.style.marginLeft = "600px";
+        //     }
+        // }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyLoad()">
+    <h2>BMI Status</h2>
+    <div class="progress">
+        <div class="progress-bar bg-dark me-1" style="width: 400px;">
+            Under-Weight Below 53Kg
+        </div>
+        <div class="progress-bar bg-success me-1" style="width: 400px;">
+            Normal Weight 54 to 70Kg
+        </div>
+        <div class="progress-bar bg-warning me-1" style="width: 400px;">
+            OverWeight Weight 70 to 86Kg
+        </div>
+        <div class="progress-bar bg-danger me-1" style="width: 400px;">
+            Obese Above 86 to 86Kg
+        </div>
+    </div>
+    <div id="yourStatus">
+        <div>
+            <span class="bi bi-triangle-fill"></span>
+            <div>You</div>
+        </div>
+    </div>
+</body>
+
+</html>

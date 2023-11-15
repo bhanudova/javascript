@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox Movies</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <h2>Inox Movies</h2>
+    <button class="btn btn-danger" data-bs-target="#movies" data-bs-toggle="modal">Book Ticket</button>
+
+    <div class="modal fade" id="movies">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button data-bs-dismiss="modal" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <select class="form-select" name="" id="">
+                                <option value="">Select Movies</option>
+                                <option value="">Top GUN - Maverick</option>
+                                <option value="">Pathaan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" name="" id="">
+                                <option value="">Select Movies</option>
+                                <option value="">Inox GVK</option>
+                                <option value="">Inox Ammerpet</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" name="" id="">
+                                <option value="">Select Date</option>
+                                <option value="">Today 08-March</option>
+                                <option value="">Tomorrow 09-March</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" name="" id="">
+                                <option value="">Select Time</option>
+                                <option value="">10:30 am</option>
+                                <option value="">5:30 pm</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" name="" id="">
+                                <option value="">Select Seats</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn btn-danger">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
