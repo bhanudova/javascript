@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        function calculateClick() {
+            var height = parseInt(document.getElementById("height").value) / 100;
+            var weight = parseInt(document.getElementById("weight").value);
+            var result = parseFloat(weight / (height * height))
+            var BMI = Number(result.toFixed(1))
+
+            if (result < 18) {
+                document.getElementById("result").innerHTML = `UnderWeight ${BMI}`;
+                document.getElementById("You").style.marginLeft='10px'
+            } else if (result > 18 && result < 25) {
+                document.getElementById("result").innerHTML = `Normal weight ${BMI}`;
+                document.getElementById("You").style.marginLeft='70px'
+
+            } else if (result > 25 && result < 30) {
+                document.getElementById("result").innerHTML = `Overweight ${BMI}`;
+                document.getElementById("You").style.marginLeft='130px'
+            }
+            else {
+                document.getElementById("result").innerHTML = `Obesity ${BMI}`;
+                document.getElementById("You").style.marginLeft='190px'
+
+            }
+        }
+    </script>
+
+</head>
+
+<body class="container-fluid d-flex justify-content-center align-items-center m-5">
+    <div class="bg-white shadow-sm w-25 border p-5 rounded-3">
+        <h2 class="text-center">BMI Calculator</h2>
+        <dl>
+            <dt>Height (C.M)</dt>
+            <dd><input type="text" class="w-100" id="height"></dd>
+            <dt>Weight (K.G)</dt>
+            <dd><input type="text" class="w-100" id="weight"></dd>
+        </dl>
+        <button onclick="calculateClick()" class="btn btn-primary w-100">Calculate</button>
+        <div class="mt-4">
+            <h4 class="text-center">Your Status</h4>
+            <div>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 100px;">
+                        Under
+                    </div>
+                    <div class="progress-bar bg-success" style="width: 100px;">
+                        Normal
+                    </div>
+                    <div class="progress-bar bg-primary" style="width: 100px;">
+                        Over
+                    </div>
+                    <div class="progress-bar bg-danger" style="width: 100px;">
+                        Obesity
+                    </div>
+                </div>
+                <div id="You">
+                    <div class="bi bi-triangle-fill fw-bold" style="font-size:11px ;">
+                        You
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result" class="mt-4 fw-bold text-center"></div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+<!-- Reference Example BMI: https://codingtorque.com/bmi-calculator-using-javascript/ -->
