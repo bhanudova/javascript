@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        .error-style{
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript">
+        function RegisterClick(){
+            var userName = document.getElementById("UserName").value;
+            var userError = document.getElementById("userError");
+            if(userName==""){
+                userError.innerHTML="UserName Required";
+                userError.className="error-style"
+            }else{
+                document.write("Registered...")
+            }
+        }
+
+        function ChangeCase(){
+            var ifsc = document.getElementById("ifsc").value;
+            document.getElementById("ifsc").value=ifsc.toUpperCase()
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>UserName</dt>
+        <dd><input type="text" id="UserName"></dd>
+        <dd id="userError"></dd>
+        <dt>IFSC Code</dt>
+        <dd><input type="text" size="6" id="ifsc" onkeyup="ChangeCase()"></dd>
+    </dl>
+    <button onclick="RegisterClick()">Register</button>
+</body>
+</html>

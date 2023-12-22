@@ -1,54 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMI Calculator</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <script>
+      function verifyColor(){
+        var color = document.querySelector('input[type="text"]').value;
+        if(color.match(/colou?r/)){
+            document.write(`Success You Enterd.. ${color}`)
+        }else{
+            alert("Only Allowed Color | Colour")
+        }
+      }
+    </script>
 </head>
-
-<body class="container-fluid">
-    <h2>Personal Loan Calculator</h2>
-    <div class="p-5 rounded-3 shadow-lg ">
-        <div class="row gap-5">
-            <div class="col d-flex justify-content-center align-items-center">
-                <div class="d-flex ">
-                    <h4>Amount You Needed&#8377;</h4>
-                    <input type="text" size="10" class="ms-1 ">
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <div class="d-flex">
-                    <h4>For</h4>
-                    <input type="text" size="10" class="mx-2">
-                    <h4>Years</h4>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <div class="d-flex">
-                    <h4>Interest Rate</h4>
-                    <input type="text" size="10" class="mx-1">
-                    <h4>%</h4>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-5 gap-2">
-            <div class="col d-flex bg-body-secondary rounded p-2">
-                &#8377;50,000<input type="range" class="form-range p-1 rounded-3 w-75" id="">&#8377;10,00,000
-            </div>
-            <div class="col d-flex bg-body-secondary rounded p-2">
-                &#8377;50,000<input type="range" class="form-range p-1 rounded-3 w-75" id="">&#8377;10,00,000
-            </div>
-            <div class="col d-flex bg-body-secondary rounded p-2">
-                &#8377;50,000<input type="range" class="form-range p-1 rounded-3 w-75" id="">&#8377;10,00,000
-            </div>
-        </div>
-    </div>
-    <div class="d-flex justify-content-center align-items-center mt-5">
-        <button class="btn btn-primary fw-medium">Calculate</button>
-    </div>
+<body>
+   Enter Colored: <input type="text"><button onclick="verifyColor()">color</button>
 </body>
-
 </html>
